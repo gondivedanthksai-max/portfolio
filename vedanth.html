@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G Vedanth Karthikeyan Sai | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-light: #818cf8;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --border-radius: 12px;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Header / Hero Section */
+        header {
+            background: linear-gradient(135deg, #1e1b4b 0%, var(--primary) 100%);
+            color: white;
+            text-align: center;
+            padding: 5rem 1.5rem;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            margin-bottom: 2rem;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            text-transform: capitalize;
+        }
+
+        header p {
+            font-size: 1.25rem;
+            color: #e0e7ff;
+            margin-top: 1rem;
+            font-weight: 300;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Section Global Styles */
+        section {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: var(--transition);
+            border: 1px solid #e2e8f0;
+        }
+
+        section:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transform: translateY(-2px);
+        }
+
+        h2 {
+            color: var(--primary);
+            font-size: 1.75rem;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2::after {
+            content: "";
+            height: 2px;
+            flex-grow: 1;
+            background-color: #e2e8f0;
+            border-radius: 2px;
+        }
+
+        p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        /* Skills Badges */
+        .skills-list {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            padding: 0;
+            list-style: none;
+        }
+
+        .skills-list li {
+            background-color: #e0e7ff;
+            color: var(--primary);
+            padding: 0.6rem 1.5rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            cursor: default;
+        }
+
+        .skills-list li:hover {
+            background-color: var(--primary);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        /* Projects Grid */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            background: #f8fafc;
+            transition: var(--transition);
+        }
+
+        .project-card:hover {
+            background: #ffffff;
+            border-color: var(--primary-light);
+            box-shadow: 0 4px 6px rgba(79, 70, 229, 0.1);
+        }
+
+        .project-card h3 {
+            margin: 0 0 0.75rem 0;
+            color: var(--text-main);
+            font-size: 1.25rem;
+        }
+
+        .project-card p {
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        /* Education Timeline */
+        .education-item {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 2rem;
+            border-left: 2px solid #e2e8f0;
+        }
+
+        .education-item::before {
+            content: "";
+            position: absolute;
+            left: -6px;
+            top: 6px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--primary);
+        }
+
+        .education-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .education-item h3 {
+            margin: 0 0 0.25rem 0;
+            color: var(--text-main);
+            font-size: 1.2rem;
+        }
+
+        .edu-meta {
+            display: inline-block;
+            background: #f1f5f9;
+            padding: 0.2rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2.5rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            header h1 { font-size: 2.2rem; }
+            section { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>G Vedanth Karthikeyan Sai</h1>
+        <p>Software Engineering Student | Full-Stack Developer</p>
+    </header>
+
+    <div class="container">
+        
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a dedicated software engineering student with a passion for building robust, scalable applications. Focused on writing clean, efficient code, I thrive on tackling complex problems and learning new technologies to bridge the gap between ideas and real-world digital solutions.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <ul class="skills-list">
+                <li>C</li>
+                <li>Java</li>
+                <li>Python</li>
+                <li>MongoDB</li>
+                <li>Express.js</li>
+                <li>React</li>
+                <li>Node.js</li>
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div class="project-grid">
+                
+                <div class="project-card">
+                    <h3>Village Connect</h3>
+                    <p>A digital platform engineered to bridge the gap between rural communities and essential resources. Designed to foster better connectivity, streamline information sharing, and support local community development.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>MERN Stack CRUD App</h3>
+                    <p>A full-stack web application built using MongoDB, Express.js, React, and Node.js. Features complete Create, Read, Update, and Delete (CRUD) operations, RESTful API integration, and a responsive, user-friendly frontend.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            
+            <div class="education-item">
+                <h3>Vasireddy Venkatadri Institute of Technology (VVIT)</h3>
+                <span class="edu-meta">B.Tech</span>
+                <p><strong>Semester Average:</strong> 7.67</p>
+            </div>
+            
+            <div class="education-item">
+                <h3>Bhashyam</h3>
+                <span class="edu-meta">Intermediate (10+2)</span>
+                <p><strong>Marks:</strong> 920</p>
+            </div>
+
+            <div class="education-item">
+                <h3>GSR EM High School</h3>
+                <span class="edu-meta">10th Standard (SSC)</span>
+                <p><strong>Marks:</strong> 529</p>
+            </div>
+
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 G Vedanth Karthikeyan Sai. Built with passion and code.</p>
+    </footer>
+
+</body>
+</html>
